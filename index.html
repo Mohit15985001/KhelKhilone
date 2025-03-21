@@ -459,14 +459,19 @@
                 max-width: calc(50% - 20px);
             }
             
+            /* MODIFIED: Changed category-item layout to be 3 per row */
             .category-item {
-                flex: 0 0 calc(50% - 20px);
-                max-width: calc(50% - 20px);
+                flex: 0 0 calc(33.33% - 10px);
+                max-width: calc(33.33% - 10px);
+                margin: 5px;
+                padding: 5px;
             }
             
+            /* MODIFIED: Changed brand-item layout to be 3 per row */
             .brand-item {
-                flex: 0 0 calc(33.33% - 20px);
-                max-width: calc(33.33% - 20px);
+                flex: 0 0 calc(33.33% - 10px);
+                max-width: calc(33.33% - 10px);
+                margin: 5px;
             }
             
             .header-decoration {
@@ -474,8 +479,8 @@
             }
             
             .brand-image {
-                width: 90px;
-                height: 90px;
+                width: 80px;
+                height: 80px;
             }
             
             .benefit-icon {
@@ -484,8 +489,8 @@
             }
             
             .category-image {
-                width: 180px;
-                height: 180px;
+                width: 100px;
+                height: 100px;
             }
             
             .video-section video {
@@ -496,14 +501,24 @@
         }
         
         @media (max-width: 576px) {
-            .benefit-item, .category-item {
-                flex: 0 0 100%;
-                max-width: 100%;
-            }
-            
-            .brand-item {
+            .benefit-item {
                 flex: 0 0 calc(50% - 20px);
                 max-width: calc(50% - 20px);
+            }
+            
+            /* MODIFIED: Keep 3 items per row even on smaller screens */
+            .category-item {
+                flex: 0 0 calc(33.33% - 10px);
+                max-width: calc(33.33% - 10px);
+                padding: 5px;
+                margin: 5px;
+            }
+            
+            /* MODIFIED: Keep 3 items per row even on smaller screens */
+            .brand-item {
+                flex: 0 0 calc(33.33% - 10px);
+                max-width: calc(33.33% - 10px);
+                margin: 5px;
             }
             
             .fact-content {
@@ -543,35 +558,73 @@
             }
             
             .benefit-icon {
-                width: 100px;
-                height: 100px;
+                width: 80px;
+                height: 80px;
             }
             
+            /* MODIFIED: Adjusted image size for better mobile display */
             .category-image {
-                width: 150px;
-                height: 150px;
+                width: 80px;
+                height: 80px;
+            }
+            
+            .brand-image {
+                width: 60px;
+                height: 60px;
             }
             
             .video-section video {
                 width: 100%;
                 height: auto;
             }
+            
+            /* MODIFIED: Smaller text for better mobile display */
+            .category-item p, .brand-item p {
+                font-size: 12px;
+                margin-bottom: 5px;
+            }
+            
+            .category-item h3, .brand-item .brand-name {
+                font-size: 14px;
+                margin: 5px 0;
+            }
+            
+            /* MODIFIED: Adjusted container padding for mobile */
+            .category-container, .brands-container {
+                gap: 2px;
+                padding: 0 2px;
+            }
         }
         
         @media (max-width: 400px) {
+            /* MODIFIED: Keep 3 items in a row even on smallest screens */
             .brand-item {
-                flex: 0 0 100%;
-                max-width: 100%;
+                flex: 0 0 calc(33.33% - 6px);
+                max-width: calc(33.33% - 6px);
+                margin: 3px;
+            }
+            
+            /* MODIFIED: Keep 3 items in a row even on smallest screens */
+            .category-item {
+                flex: 0 0 calc(33.33% - 6px);
+                max-width: calc(33.33% - 6px);
+                padding: 3px;
+                margin: 3px;
             }
             
             .brand-image {
-                width: 100px;
-                height: 100px;
+                width: 50px;
+                height: 50px;
+            }
+            
+            .category-image {
+                width: 70px;
+                height: 70px;
             }
             
             .benefit-icon {
-                width: 90px;
-                height: 90px;
+                width: 70px;
+                height: 70px;
             }
             
             h2 {
@@ -582,8 +635,12 @@
                 font-size: 1.2rem;
             }
             
+            .category-item h3, .brand-item .brand-name {
+                font-size: 0.85rem;
+            }
+            
             .container {
-                padding: 15px;
+                padding: 15px 8px;
             }
         }
         
@@ -623,163 +680,209 @@
         }
 
         .main-footer {
-        background-color: #111;
-        color: #fff;
-        padding: 40px 20px 20px;
-        font-family: Arial, sans-serif;
-    }
+            background-color: #111;
+            color: #fff;
+            padding: 40px 20px 20px;
+            font-family: Arial, sans-serif;
+        }
 
-    .footer-container {
-        display: flex;
-        flex-wrap: wrap;
-        max-width: 1200px;
-        margin: 0 auto;
-        justify-content: space-between;
-    }
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            justify-content: space-between;
+        }
 
-    .footer-column {
-        flex: 1;
-        min-width: 160px;
-        margin-bottom: 30px;
-        padding: 0 15px;
-    }
-
-    .footer-column h3 {
-        font-size: 18px;
-        margin-bottom: 20px;
-        font-weight: 600;
-        color: #fff;
-    }
-
-    .footer-links {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    .footer-links-mt {
-        margin-top: 47px; /* Adjusts for columns without headings */
-    }
-
-    .footer-links li {
-        margin-bottom: 8px;
-    }
-
-    .footer-links a {
-        color: #fff;
-        text-decoration: none;
-        font-size: 14px;
-        transition: color 0.3s ease;
-    }
-
-    .footer-links a:hover {
-        color: #ff9900;
-    }
-
-    .social-icons {
-        display: flex;
-        gap: 10px;
-        margin-bottom: 20px;
-    }
-
-    .social-icon {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 36px;
-        height: 36px;
-        background-color: #fff;
-        border-radius: 50%;
-        transition: transform 0.3s ease;
-    }
-
-    .social-icon:hover {
-        transform: translateY(-3px);
-    }
-
-    .social-icon img {
-        width: 18px;
-        height: 18px;
-    }
-
-    .made-in-india {
-        margin-top: 20px;
-    }
-
-    .made-in-india img {
-        width: 100px;
-        height: auto;
-    }
-
-    .footer-bottom {
-        max-width: 1200px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        padding-top: 20px;
-        border-top: 1px solid #333;
-    }
-
-    .copyright {
-        font-size: 14px;
-        color: #ccc;
-        margin-bottom: 15px;
-    }
-
-    .payment-methods {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    .payment-methods img {
-        height: 24px;
-        width: auto;
-    }
-
-    /* Responsive Styles */
-    @media (max-width: 992px) {
         .footer-column {
-            flex: 0 0 30%;
+            flex: 1;
+            min-width: 160px;
+            margin-bottom: 30px;
+            padding: 0 15px;
         }
-    }
 
-    @media (max-width: 768px) {
-        .footer-column {
-            flex: 0 0 45%;
+        .footer-column h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            color: #fff;
         }
-        
-        .footer-bottom {
-            flex-direction: column;
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
         }
-        
-        .copyright {
-            text-align: center;
+
+        .footer-links-mt {
+            margin-top: 47px; /* Adjusts for columns without headings */
+        }
+
+        .footer-links li {
+            margin-bottom: 8px;
+        }
+
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #ff9900;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 10px;
             margin-bottom: 20px;
         }
-        
-        .payment-methods {
-            justify-content: center;
-        }
-    }
 
-    @media (max-width: 576px) {
-        .footer-column {
-            flex: 0 0 100%;
+        .social-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background-color: #fff;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
         }
-        
-        .footer-links-mt {
-            margin-top: 0;
+
+        .social-icon:hover {
+            transform: translateY(-3px);
         }
-    }
+
+        .social-icon img {
+            width: 18px;
+            height: 18px;
+        }
+
+        .made-in-india {
+            margin-top: 20px;
+        }
+
+        .made-in-india img {
+            width: 100px;
+            height: auto;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+        }
+
+        .copyright {
+            font-size: 14px;
+            color: #ccc;
+            margin-bottom: 15px;
+        }
+
+        .payment-methods {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .payment-methods img {
+            height: 24px;
+            width: auto;
+        }
+
+        /* Improved Footer Responsive Styles */
+        @media (max-width: 992px) {
+            .footer-column {
+                flex: 0 0 30%;
+                padding: 0 10px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .footer-column {
+                flex: 0 0 33.33%;
+                padding: 0 8px;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                padding-top: 15px;
+            }
+            
+            .copyright {
+                text-align: center;
+                margin-bottom: 15px;
+            }
+            
+            .payment-methods {
+                justify-content: center;
+            }
+            
+            .footer-links-mt {
+                margin-top: 0;
+            }
+            
+            .footer-links li {
+                margin-bottom: 6px;
+                font-size: 13px;
+            }
+            
+            .footer-column h3 {
+                font-size: 16px;
+                margin-bottom: 15px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .footer-container {
+                gap: 10px;
+            }
+            
+            .footer-column {
+                flex: 0 0 33.33%;
+                padding: 0 5px;
+                margin-bottom: 20px;
+            }
+            
+            .footer-links li {
+                margin-bottom: 5px;
+                font-size: 12px;
+            }
+            
+            .footer-column h3 {
+                font-size: 14px;
+                margin-bottom: 10px;
+            }
+            
+            .social-icons {
+                gap: 8px;
+            }
+            
+            .social-icon {
+                width: 30px;
+                height: 30px;
+            }
+            
+            .made-in-india img {
+                width: 80px;
+            }
+            
+            .main-footer {
+                padding: 25px 10px 15px;
+            }
+        }
     </style>
 </head>
 <body>
    
     <div class="section-max-width">
-        <img src="assests/kk.png" alt="Home-page" class="image-max-width">
+        <img src="assests/main-board-khelKhilone.png" alt="Home-page" class="image-max-width">
     </div>
 
     <section class="video-section">
@@ -1014,15 +1117,6 @@
                 </ul>
             </div>
             
-            <div class="footer-column">
-                <h3>Useful links</h3>
-                <ul class="footer-links">
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Return & Cancellation Policy</a></li>
-                    <li><a href="#">Shipping Policy</a></li>
-                    <li><a href="#">Terms & Conditions</a></li>
-                </ul>
-            </div>
             
             <div class="footer-column">
                 <h3>Follow Us</h3>
