@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KhelKhilona - Premium Toys for Children</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fffbf5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* Header styles */
+        header {
+            background: linear-gradient(135deg, #ff9900, #ff6600);
+            padding: 20px 15px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .logo {
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            font-weight: bold;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+        
+        .tagline {
+            font-size: clamp(1rem, 3vw, 1.2rem);
+            margin: 5px 0 0;
+            font-style: italic;
+        }
+        
+        .header-decoration {
+            margin: 15px auto;
+            max-width: 500px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .toy-icon {
+            width: 40px;
+            height: 40px;
+            margin: 5px;
+            background-color: rgba(255,255,255,0.7);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+        
+        /* Navigation styles */
+        nav {
+            background-color: #fff;
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        nav li {
+            margin: 5px 10px;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            display: block;
+        }
+        
+        nav a:hover {
+            background-color: #ff9900;
+            color: white;
+        }
+        
+        /* Layout containers */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            width: 95%;
+        }
+        
+        /* Typography */
+        h1, h2 {
+            text-align: center;
+            color: #333;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
+        
+        h3 {
+            margin: 0.5rem 0;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        /* Benefits section */
+        .benefits {
+            background-color: #fffbf5;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .benefits-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 0 auto;
+            gap: 20px;
+        }
+        
+        .benefit-item {
+            flex: 1 1 300px;
+            max-width: 350px;
+            margin: 10px;
+            text-align: center;
+            padding: 15px;
+            transition: transform 0.3s ease;
+        }
+        
+        .benefit-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .benefit-icon {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+        }
+        
+        .benefit-icon img {
+            max-width: 70%;
+            height: auto;
+            object-fit: contain;
+        }
+        
+        .blue {
+            background-color: #69a5e5;
+        }
+        
+        .orange {
+            background-color: #e36e45;
+        }
+        
+        .green {
+            background-color: #a7d685;
+        }
+        
+        /* Fact banner */
+        .fact-banner {
+            background-color: #e36e45;
+            color: white;
+            padding: 30px 15px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .fact-banner img {
+            max-width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+        
+        .fact-banner h2 {
+            color: white;
+            margin-top: 0;
+        }
+        
+        .fact-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 900px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+        
+        .fact-content img {
+            max-width: 150px;
+            margin: 0 20px 20px 0;
+            height: auto;
+            object-fit: contain;
+        }
+        
+        .fact-text {
+            text-align: left;
+            font-size: 18px;
+            flex: 1 1 300px;
+        }
+        
+        /* Video section */
+        .video-section {
+            padding: 40px 0;
+            text-align: center;
+            background-color: #f5f5f5;
+        }
+        
+        .video-section video {
+            max-width: 100%;
+            height: auto;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            border-radius: 8px;
+        }
+        
+        /* Toy categories */
+        .toy-categories {
+            padding: 40px 0;
+        }
+        
+        .category-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 20px;
+        }
+        
+        .category-item {
+            flex: 1 1 220px;
+            max-width: 280px;
+            margin: 10px;
+            text-align: center;
+            padding: 15px;
+            transition: transform 0.3s ease;
+        }
+        
+        .category-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .category-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 15px;
+            background-color: #f0f0f0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        
+        .category-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .category-image img:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Action figures */
+        .action-figures {
+            padding: 40px 0;
+            background-color: #f5f5f5;
+        }
+        
+        .brands-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0;
+            gap: 15px;
+        }
+        
+        .brand-item {
+            flex: 1 1 150px;
+            max-width: 200px;
+            margin: 10px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .brand-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .brand-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 15px;
+            background-color: #000;
+            border: 3px solid #fff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .brand-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+        
+        .brand-image img:hover {
+            transform: scale(1.1);
+        }
+        
+        .brand-name {
+            color: #006699;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #89c53e;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        
+        /* WhatsApp button */
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            z-index: 99;
+            transition: transform 0.3s ease;
+        }
+        
+        .whatsapp-button:hover {
+            transform: scale(1.1);
+        }
+        
+        .whatsapp-button img {
+            width: 35px;
+            height: auto;
+        }
+        
+        /* Responsive image handling */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        /* Home page sections */
+        .Home-page {
+            width: 100%;
+            overflow: hidden;
+        }
+        
+        .Home-page img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+        
+        /* Responsive container for all sections */
+        .section-max-width {
+            max-width: 1400px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        
+        .image-max-width {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Improved Media Queries */
+        @media (max-width: 1200px) {
+            .brand-item {
+                flex: 0 0 calc(33.33% - 20px);
+                max-width: calc(33.33% - 20px);
+            }
+            
+            .brand-image {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .benefit-icon {
+                width: 140px;
+                height: 140px;
+            }
+            
+            .video-section video {
+                width: 90%;
+                max-width: 800px;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .container {
+                width: 95%;
+            }
+            
+            .benefit-icon, .category-image {
+                width: 130px;
+                height: 130px;
+            }
+            
+            .Home-page img {
+                height: auto;
+            }
+            
+            .video-section video {
+                width: 95%;
+                max-width: 600px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .benefit-item {
+                flex: 0 0 calc(50% - 20px);
+                max-width: calc(50% - 20px);
+            }
+            
+            .category-item {
+                flex: 0 0 calc(50% - 20px);
+                max-width: calc(50% - 20px);
+            }
+            
+            .brand-item {
+                flex: 0 0 calc(33.33% - 20px);
+                max-width: calc(33.33% - 20px);
+            }
+            
+            .header-decoration {
+                max-width: 300px;
+            }
+            
+            .brand-image {
+                width: 90px;
+                height: 90px;
+            }
+            
+            .benefit-icon {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .category-image {
+                width: 180px;
+                height: 180px;
+            }
+            
+            .video-section video {
+                width: 100%;
+                max-width: 500px;
+                height: auto;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .benefit-item, .category-item {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+            
+            .brand-item {
+                flex: 0 0 calc(50% - 20px);
+                max-width: calc(50% - 20px);
+            }
+            
+            .fact-content {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .fact-content img {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+            
+            .fact-text {
+                text-align: center;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav li {
+                margin: 5px 0;
+                width: 80%;
+                text-align: center;
+            }
+            
+            .whatsapp-button {
+                width: 50px;
+                height: 50px;
+                bottom: 15px;
+                right: 15px;
+            }
+            
+            .whatsapp-button img {
+                width: 28px;
+            }
+            
+            .benefit-icon {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .category-image {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .video-section video {
+                width: 100%;
+                height: auto;
+            }
+        }
+        
+        @media (max-width: 400px) {
+            .brand-item {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+            
+            .brand-image {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .benefit-icon {
+                width: 90px;
+                height: 90px;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            h3 {
+                font-size: 1.2rem;
+            }
+            
+            .container {
+                padding: 15px;
+            }
+        }
+        
+        /* Add hamburger menu for mobile */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 5px;
+            color: #333;
+        }
+        
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+                position: absolute;
+                top: 15px;
+                right: 15px;
+            }
+            
+            nav ul {
+                display: none;
+                width: 100%;
+                padding: 10px 0;
+            }
+            
+            nav ul.active {
+                display: flex;
+            }
+            
+            nav {
+                position: relative;
+                padding: 15px 0;
+            }
+        }
+
+        .main-footer {
+        background-color: #111;
+        color: #fff;
+        padding: 40px 20px 20px;
+        font-family: Arial, sans-serif;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+
+    .footer-column {
+        flex: 1;
+        min-width: 160px;
+        margin-bottom: 30px;
+        padding: 0 15px;
+    }
+
+    .footer-column h3 {
+        font-size: 18px;
+        margin-bottom: 20px;
+        font-weight: 600;
+        color: #fff;
+    }
+
+    .footer-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-links-mt {
+        margin-top: 47px; /* Adjusts for columns without headings */
+    }
+
+    .footer-links li {
+        margin-bottom: 8px;
+    }
+
+    .footer-links a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 14px;
+        transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover {
+        color: #ff9900;
+    }
+
+    .social-icons {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .social-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        background-color: #fff;
+        border-radius: 50%;
+        transition: transform 0.3s ease;
+    }
+
+    .social-icon:hover {
+        transform: translateY(-3px);
+    }
+
+    .social-icon img {
+        width: 18px;
+        height: 18px;
+    }
+
+    .made-in-india {
+        margin-top: 20px;
+    }
+
+    .made-in-india img {
+        width: 100px;
+        height: auto;
+    }
+
+    .footer-bottom {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding-top: 20px;
+        border-top: 1px solid #333;
+    }
+
+    .copyright {
+        font-size: 14px;
+        color: #ccc;
+        margin-bottom: 15px;
+    }
+
+    .payment-methods {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .payment-methods img {
+        height: 24px;
+        width: auto;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 992px) {
+        .footer-column {
+            flex: 0 0 30%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .footer-column {
+            flex: 0 0 45%;
+        }
+        
+        .footer-bottom {
+            flex-direction: column;
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .payment-methods {
+            justify-content: center;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .footer-column {
+            flex: 0 0 100%;
+        }
+        
+        .footer-links-mt {
+            margin-top: 0;
+        }
+    }
+    </style>
+</head>
+<body>
+   
+    <div class="section-max-width">
+        <img src="assests/kk.png" alt="Home-page" class="image-max-width">
+    </div>
+
+    <section class="video-section">
+        <div class="container">
+            <h2>Watch Our Story</h2>
+            <video controls width="100%" height="auto" autoplay loop muted>
+                <source src="assests/khel.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+
+    <section class="Home-page section-max-width">
+        <img src="assests/home_page_block.webp" alt="Home-page" class="image-max-width">
+    </section>
+
+    <section class="benefits">
+        <div class="container">
+            <h2>Why Hundreds of Families Love Us</h2>
+            <div class="benefits-container">
+                <div class="benefit-item">
+                    <div class="benefit-icon blue">
+                        <img src="assests/childsafe.avif" alt="Child Safe Icon">
+                    </div>
+                    <h3>100% Child Safe</h3>
+                    <p>All our toys meet strict safety standards</p>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon orange">
+                        <img src="assests/AwardWinning.avif" alt="Award Winning Icon">
+                    </div>
+                    <h3>Award Winning</h3>
+                    <p>Recognized for exceptional quality and design</p>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon green">
+                        <img src="assests/PlayBased.avif" alt="Play-Based Learning Icon">
+                    </div>
+                    <h3>Play-Based Learning</h3>
+                    <p>Educational toys that make learning fun</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+  
+    <section class="fact-banner">
+        <div class="section-max-width">
+            <img src="assests/Dino.webp" alt="Toys illustration" class="image-max-width">
+        </div>
+    </section>
+    
+    <section class="toy-categories">
+        <div class="container">
+            <h2>Toys By Category</h2>
+            <div class="category-container">
+                <div class="category-item">
+                    <div class="category-image">
+                        <img src="assests/activePlay.avif" alt="Active Play">
+                    </div>
+                    <h3>Active Play</h3>
+                    <p>Toys that encourage physical activity</p>
+                </div>
+                
+                <div class="category-item">
+                    <div class="category-image">
+                        <img src="assests/learningToys.avif" alt="Learning Toys">
+                    </div>
+                    <h3>Learning Toys</h3>
+                    <p>Educational toys that develop skills</p>
+                </div>
+                
+                <div class="category-item">
+                    <div class="category-image">
+                        <img src="assests/PretendPlay.avif" alt="Pretend Play">
+                    </div>
+                    <h3>Pretend Play</h3>
+                    <p>Toys that spark imagination</p>
+                </div>
+                
+                <div class="category-item">
+                    <div class="category-image">
+                        <img src="assests/PuzzleCards.avif" alt="Puzzles & Cards">
+                    </div>
+                    <h3>Puzzles & Cards</h3>
+                    <p>Games that develop problem-solving</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="action-figures">
+        <div class="container">
+            <h2>Cars, Guns & Action Figures</h2>
+            <div class="brands-container">
+                <div class="brand-item">
+                    <div class="brand-image">
+                        <img src="assests/Nerf_416x416.webp" alt="Nerf toy">
+                    </div>
+                    <div class="brand-name">Nerf</div>
+                </div>
+                
+                <div class="brand-item">
+                    <div class="brand-image">
+                        <img src="assests/transformer.webp" alt="Transformers toy">
+                    </div>
+                    <div class="brand-name">Transformers</div>
+                </div>
+                
+                <div class="brand-item">
+                    <div class="brand-image">
+                        <img src="assests/marvel.webp" alt="Marvel toy">
+                    </div>
+                    <div class="brand-name">Marvel</div>
+                </div>
+                
+                <div class="brand-item">
+                    <div class="brand-image">
+                        <img src="assests/Beyblade.avif" alt="Beyblade toy">
+                    </div>
+                    <div class="brand-name">Beyblade</div>
+                </div>
+                
+                <div class="brand-item">
+                    <div class="brand-image">
+                        <img src="assests/HW.avif" alt="Hot Wheels toy">
+                    </div>
+                    <div class="brand-name">Hot Wheels</div>
+                </div>
+                
+                <div class="brand-item">
+                    <div class="brand-image">
+                        <img src="assests/Majorette.avif" alt="Majorette toy">
+                    </div>
+                    <div class="brand-name">Majorette</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    
+    <a href="https://wa.me/919420101924" class="whatsapp-button">
+        <img src="assests/WhatsApp.webp" alt="WhatsApp">
+    </a>
+    
+    <script>
+        // JavaScript for mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navMenu = document.getElementById('nav-menu');
+            
+            menuToggle.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+            });
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', function(event) {
+                const isClickInsideMenu = navMenu.contains(event.target);
+                const isClickOnToggle = menuToggle.contains(event.target);
+                
+                if (!isClickInsideMenu && !isClickOnToggle && navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                }
+            });
+            
+            // Handle window resize
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768 && navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                }
+            });
+        });
+    </script>
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Categories</h3>
+                <ul class="footer-links">
+                    <li>Baby Walker</li>
+                    <li>Board Games</li>
+                    <li>Chairs</li>
+                    <li>Drum</li>
+                    <li>Kick Scooters</li>
+                    <li>Magic Car</li>
+                    <li>Potty Seats</li>
+                    <li>Friction Toys</li>
+                    <li>Ride On</li>
+                    <li>Tent House</li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <ul class="footer-links footer-links-mt">
+                    <li>Bath Tub</li>
+                    <li>Bump N Go</li>
+                    <li>Cubes</li>
+                    <li>Guns</li>
+                    <li>Kids Furniture</li>
+                    <li>Musical Toys</li>
+                    <li>Pull Along</li>
+                    <li>Pull String</li>
+                    <li>Sports Toys</li>
+                    <li>Tricycle</li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <ul class="footer-links footer-links-mt">
+                    <li>Blocks</li>
+                    <li>Carroms</li>
+                    <li>Doll Houses</li>
+                    <li>Infants</li>
+                    <li>Kitchen Sets</li>
+                    <li>Pop Catch</li>
+                    <li>Educational</li>
+                    <li>R/C Cars</li>
+                    <li>Tables</li>
+                    <li>Walkie Talkie</li>
+                </ul>
+            </div>
+            
+            
+            <div class="footer-column">
+                <h3>Company</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Useful links</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Return & Cancellation Policy</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/share/192NQVCybU/?mibextid=wwXIfr" class="social-icon"><img src="assests/f.png" alt="Facebook"></a>
+                    <a href="https://maps.app.goo.gl/5eLki8rRxrqaCAV98?g_st=com.google.maps.preview.copy" class="social-icon"><img src="assests/m.jpeg" alt="Twitter"></a>
+                    <a href="https://www.instagram.com/khel__khilone?igsh=cGc1YmkyMjNjdXRr" class="social-icon"><img src="assests/i.png" alt="Instagram"></a>
+                   
+                </div>
+                <div class="made-in-india">
+                    <img src="assests/madeInIndia.jpg" alt="Made in India">
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="copyright">
+                <p>Copyright © 2025 KhelKhilone. All rights reserved.</p>
+            </div>
+            
+        </div>
+    </footer>
+</body>
+
+</html>
